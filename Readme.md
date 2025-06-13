@@ -38,7 +38,7 @@ _Reherse_ is an intelligent web application that helps users practice and improv
 
 1. **Clone the repo**
    
-   -->git clone https://github.com/yourusername/reherse-ai-interview-trainer.git
+   -->git clone https://github.com/Mohit1423/Reherse-AI_Interview_Trainer
 
    -->cd Interview_Trainer
    -->Open two terminals
