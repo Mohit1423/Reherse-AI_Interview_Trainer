@@ -47,9 +47,9 @@ _Reherse_ is an intelligent web application that helps users practice and improv
 
    -->cd to Backend
    -->Download the required modules using npm i 
-   -->in the .env file you need to add the required API's
-                PORT=4000
+   -->in the .env file you need to add the required 
 
+                #PORT = 4000
                 # MongoDB
                 MONGO_URL=your_mongodb_connection_string
 
