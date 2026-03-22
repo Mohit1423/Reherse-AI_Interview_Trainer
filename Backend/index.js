@@ -13,7 +13,7 @@ const port= process.env.PORT || 3000;
 const corsOptions = {
     origin: [
     "http://localhost:5173",
-    "https://job-portal-six-amber.vercel.app"
+    "https://reherse-ai-interview-trainer.vercel.app/"
     ],
     credentials:true,
 
