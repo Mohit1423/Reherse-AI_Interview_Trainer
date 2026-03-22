@@ -100,7 +100,7 @@ function Interview_prep({setQuestions}) {
 
           setLoading(true);
           //Get Interview Questions
-          const response = await axios.post("http://localhost:4000/api/v1/interview/getquestions",data);
+          const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/v1/interview/getquestions`,data);
           
           const cleanGeminiResponse = (text) => {
               return text

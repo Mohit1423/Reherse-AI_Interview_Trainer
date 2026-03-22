@@ -15,7 +15,7 @@ const Login = () => {
         const formData = new FormData(e.target);
         const data = Object.fromEntries(formData.entries());
 
-        const response = await axios.post("http://localhost:4000/api/v1/user/Login",data);
+        const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/v1/user/Login`,data);
         dispatch(setUser(response.data.user));
         toast.success(response.data.message);
         navigate('/user');

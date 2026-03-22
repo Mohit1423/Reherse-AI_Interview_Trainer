@@ -28,16 +28,16 @@ export default function Loading_Analysis() {
       
       // 1) Upload file to cloudinary (10% → 33%);
       setText("Uploading Interview Recording");
-      const response  = await axios.post("http://localhost:4000/api/v1/interview/saveinterview",formData)
+      const response  = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/v1/interview/saveinterview`,formData)
       const cloudinary_url = response.data.data;
       setProgress(33);
       // 2) Send questions timestamps + file URL for assembly/analysis (33% → 66%);
       setText("Generating Transcript");
-      const AudioAnalysis = await axios.post("http://localhost:4000/api/v1/interview/generatetranscript", { cloudinary_url, questions });
+      const AudioAnalysis = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/v1/interview/generatetranscript`, { cloudinary_url, questions });
       setProgress(66);
       // 3) Finalize / load Analysis page (66% → 80%);
       setText("Analyzing Transcript");
-      const enrichedAnalysis = await axios.post("http://localhost:4000/api/v1/interview/analyzeTranscript", AudioAnalysis.data.data);
+      const enrichedAnalysis = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/v1/interview/analyzeTranscript`, AudioAnalysis.data.data);
       
       setProgress(80);
       // 4)Add Camera Analysis of the interview
@@ -59,7 +59,7 @@ export default function Loading_Analysis() {
         userId:user._id,
         interview
       }
-      const updateUser = await axios.post("http://localhost:4000/api/v1/user/addInterview",send_data);
+      const updateUser = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/v1/user/addInterview`,send_data);
       console.log(updateUser.data.user);
       dispatch(setUser(updateUser.data.user));
       toast.success("Interview uploaded successfully");
