@@ -60,6 +60,7 @@ export const SaveInterview = async (req, res) => {
     const cloudResponse = await cloudinary.uploader.upload(fileUri.content, {
       folder: "Ai_Interview/userInterviews",
       resource_type: "video",
+      timeout: 300000,
     });
 
     res.status(200).json({
