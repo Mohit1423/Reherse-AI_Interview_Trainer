@@ -70,7 +70,10 @@ _Reherse_ is an intelligent web application that helps users practice and improv
 
     -->cd to Frontend
     -->Download the required modules using npm i 
-    -->Run the command npm run dev
+    -->Add an .env file in which
+
+             #  VITE_API_BASE_URL = http://localhost:4000
+   -->run npm run dev
 
    
    
