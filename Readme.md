@@ -77,4 +77,4 @@ _Reherse_ is an intelligent web application that helps users practice and improv
 
    
    
-Deployment Link : reherse-ai-interview-trainer.vercel.app
+Deployment Link : https://reherse-ai-interview-trainer.vercel.app
